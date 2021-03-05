@@ -1,12 +1,17 @@
 public class MoodAnalyser {
-        public String message="Im in Any mood";
-        public String analyseMood() {
+    public String message;
 
-                if (message.contains("sad")) {
-                    return "SAD";
-                } else {
-                    return "HAPPY";
-                }
-            }
+    public MoodAnalyser() {
+        this.message = "I am in happy Mood";
+    }
+
+    public String analyseMood() {
+        if (message.contains("happy")) {
+            return "SAD";
+        } else {
+            return "HAPPY";
+        }
+    }
+
 
 }
