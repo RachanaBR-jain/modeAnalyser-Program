@@ -17,7 +17,7 @@ public class MoodAnalyser {
         }catch(NullPointerException e){
             System.out.println("handled Exception-->"+e);
         }
-        return "Handled Exception";
+        return "HAPPY";
     }
 
 
