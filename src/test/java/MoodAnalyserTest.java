@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
         @Test
         public void testHappyMood(){
 
-            System.out.println(mood.analyseMood("I am in happy mood"));
+            System.out.println(mood.analyseMood("I am in sad mood"));
 
         }
 
