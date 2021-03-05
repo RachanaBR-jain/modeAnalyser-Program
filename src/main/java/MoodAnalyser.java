@@ -1,16 +1,23 @@
 public class MoodAnalyser {
     public String message;
 
-    public MoodAnalyser() {
-        this.message = "I am in happy Mood";
+
+    public MoodAnalyser(String message) {
+        this.message = message;
     }
 
     public String analyseMood() {
-        if (message.contains("happy")) {
-            return "SAD";
-        } else {
-            return "HAPPY";
+
+        try {
+            if (message.contains("sad")) {
+                return "SAD";
+            } else {
+                return "HAPPY";
+            }
+        }catch(NullPointerException e){
+            System.out.println("handled Exception-->"+e);
         }
+        return "Handled Exception";
     }
 
 
