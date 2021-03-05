@@ -21,9 +21,13 @@ import org.junit.jupiter.api.Test;
 
         @Test
         public void HandleException_WhenInvalidInput(){
-            MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-            String mood = moodAnalyser.analyseMood();
-            Assertions.assertEquals("HAPPY",mood);
+            MoodAnalyser mood = new MoodAnalyser(null);
+            try {
+                mood.analyseMood();
+            }catch (MoodAnalyserException e) {
+                Assertions.assertEquals("Invalid Mood", e.getMessage());
+            }
+
         }
 
 
